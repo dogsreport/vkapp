@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?115"></script>
+</head>
+<body>
+<script>
+if(window.location.href.match(/id=/)) {
+    document.write('Привет, id' + window.location.href.match(/id=(\d+)/)[1]);
+} else {
+    VK.init({apiId: 6387801});
+    VK.Auth.getLoginStatus(function(response) { 
+        if(response.status != "unknown") {
+            window.location = 'https://vk.com/app6387801#' + window.location.href; 
+        }
+    });
+}
+</script>
+</body>
+</html>
