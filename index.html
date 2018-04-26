@@ -11,6 +11,8 @@ if(window.location.href.match(/id=/)) {
     VK.Auth.getLoginStatus(function(response) { 
         if(response.status != "unknown") {
             window.location = 'https://vk.com/app6387801#' + window.location.href; 
+        } else {
+            document.write("Вы не залогинены ВКонтакте");
         }
     });
 }
