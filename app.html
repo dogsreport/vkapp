@@ -1,7 +1,7 @@
 <html>
 <script>
 var id = window.location.href.match(/viewer_id=(\d+)/)[1];
-var page = window.location.href.match(/hash=(.+)/)[1]
+var page = window.location.href.match(/&hash=(.+)/)[1]
 
 window.parent.location = decodeURIComponent(page) + '?id=' + id;
 </script>
